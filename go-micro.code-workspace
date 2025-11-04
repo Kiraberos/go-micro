@@ -1,11 +1,14 @@
 {
-    "folders": [
-        {
-            "path": "../../Downloads/front-end"
-        },
-        {
-            "path": "broker-service"
-        }
-    ],
-    "settings": {}
+  "folders": [
+    {
+      "path": "../../Downloads/front-end"
+    },
+    {
+      "path": "broker-service"
+    },
+    {
+      "path": "project"
+    }
+  ],
+  "settings": {}
 }
