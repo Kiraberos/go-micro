@@ -1,10 +1,4 @@
-.idea/.gitignore
-.idea/copilot.data.migration.agent.xml
-.idea/copilot.data.migration.ask.xml
-.idea/copilot.data.migration.ask2agent.xml
-.idea/copilot.data.migration.edit.xml
-.idea/go-micro.iml
-.idea/modules.xml
-.idea/vcs.xml
+.idea/
 .DS_Store
 /.github/
+/project/db-data/
