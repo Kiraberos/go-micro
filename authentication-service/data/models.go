@@ -111,7 +111,7 @@ func (u *User) GetByEmail(email string) (*User, error) {
 }
 
 // GetOne returns one user by id
-func (u *User) GetOne(id int) (*User, error) {
+func (u *User) GetById(id int) (*User, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), dbTimeout)
 	defer cancel()
 
