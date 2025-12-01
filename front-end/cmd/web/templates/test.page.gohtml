@@ -7,11 +7,28 @@
                 <h1 class="mt-5">Test microservices</h1>
                 <hr>
                 <a id="brokerBtn" class="btn btn-outline-secondary" href="javascript:void(0)">Test Broker</a>
-                <a id="authBrokerBtn" class="btn btn-outline-secondary" href="javascript:void(0)">Test Auth</a>
 
                 <div id="output" class="mt-5" style="outline: 1px solid silver; padding: 2em;">
                     <span class="text-muted">Output shows here...</span>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h4 class="mt-5">Authentication</h4>
+                <form id="authForm">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email"
+                               placeholder="Enter email" value="admin@example.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password"
+                               placeholder="Enter password" value="verysecret" required>
+                    </div>
+                    <a id="authBrokerBtn" class="btn btn-outline-secondary" href="javascript:void(0)">Login</a>
+                </form>
             </div>
         </div>
         <div class="row">
@@ -41,11 +58,14 @@
 
         authBrokerBtn.addEventListener("click", function() {
 
+           const email = document.getElementById("email").value;
+           const password = document.getElementById("password").value;
+
            const payload = {
                action: "auth",
                auth : {
-                   email: "admin@example.com",
-                   password: "very secret"
+                   email: email,
+                   password: password
                }
            }
 
