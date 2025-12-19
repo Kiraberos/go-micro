@@ -52,6 +52,12 @@ func openDb(dsn string) (*sql.DB, error) {
 	if err != nil {
 		return nil, err
 	}
+	defer func(db *sql.DB) {
+		err := db.Close()
+		if err != nil {
+			log.Println("Error closing database:", err)
+		}
+	}(db)
 
 	err = db.Ping()
 	if err != nil {
